@@ -1,0 +1,29 @@
+.sub-master {
+  margin-left: 10px;
+}
+
+.sub-master-font-size {
+  width: 49px;
+  height: auto;
+  position: absolute;
+  top: 37px;
+  right: 1%;
+  border: 2px solid #00f2fe;
+  border-radius: 5px;
+  background: rgba(0,0,0, .8);
+}
+
+.sub-master-font-size > div {
+  width: 100%;
+  height: 38px;
+  font-size: 14px;
+  color: #fff;
+  line-height: 38px;
+  text-align: center;
+  border-bottom: 1px solid #00506a;
+  cursor: pointer;
+}
+
+.sub-master-font-size > div:active {
+  color: #00f2fe;
+}

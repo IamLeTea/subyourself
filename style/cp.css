@@ -1,0 +1,28 @@
+.sub-master {
+  text-align: left;
+  margin: 12px auto 0;
+}
+
+.sub-master-label,
+.sub-master-btn {
+  padding: 5px 10px;
+  border: 1px solid transparent;
+}
+
+.sub-master-btn {
+  opacity: .75;
+  cursor: pointer;
+}
+
+.sub-master-btn:hover {
+  opacity: 1;
+}
+
+.sub-master-btn:active {
+  border-color: #fff;
+}
+
+.col {
+  user-select: none;
+  -webkit-user-select: none;
+}
