@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "version": "1.2.2",
+  "version": "1.2.3",
   "name": "字己來",
   "description": "想要調整字體大小不再是難事！",
   "homepage_url": "https://github.com/IamLeTea/subyourself",
@@ -23,7 +23,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["http://www.catchplay.com/*"],
+      "matches": ["https://www.catchplay.com/*"],
       "css": ["style/cp.css"],
       "js": ["lib/jquery-3.2.1.min.js", "script/cp.js"]
     },
