@@ -28,7 +28,10 @@ function addNewStyle(newStyle) {
 function adjustFontSize(px, vw) {
   localStorage.setItem(LOCALSTORAGE_PX, px);
   localStorage.setItem(LOCALSTORAGE_VW, vw);
-  addNewStyle('.no-fullwindow.no-fullscreen #text-track, .no-fullwindow.no-fullscreen .vjs-text-track-display div { font-size: ' + px + 'px !important } .fullscreen #text-track, .fullscreen .vjs-text-track-display div, .fullwindow.no-fullscreen #text-track, .fullwindow.no-fullscreen .vjs-text-track-display div { font-size: ' + vw + 'vw !important }');
+  addNewStyle(
+    '.no-fullwindow.no-fullscreen #text-track, .no-fullwindow.no-fullscreen .vjs-text-track-display div { font-size: ' + px + 'px !important } .fullscreen #text-track, .fullscreen .vjs-text-track-display div, .fullwindow.no-fullscreen #text-track, .fullwindow.no-fullscreen .vjs-text-track-display div { font-size: ' + vw + 'vw !important } ' +
+    'video::-webkit-media-text-track-display { font-size: ' + px + 'px; }'
+  );
 
   /*
   .no-fullwindow.no-fullscreen #text-track,
@@ -42,6 +45,10 @@ function adjustFontSize(px, vw) {
   .fullwindow.no-fullscreen .vjs-text-track-display div,
    {
     font-size: ' + vw + 'vw !important
+   }
+
+   video::-webkit-media-text-track-display {
+     font-size: ' + px + 'px;
    }
    */
 }
@@ -85,6 +92,7 @@ setInterval(function() {
   var $player = $(".player-real");
 
   // Handle Keydown Event
+  /*
   if ($player.length > 0 && !keydownEventRegister) {
     keydownEventRegister = true;
     window.addEventListener('keydown', handleOnKeyDown);
@@ -92,6 +100,7 @@ setInterval(function() {
     window.removeEventListener('keydown', handleOnKeyDown);
     keydownEventRegister = false;
   }
+  */
 
   // Handle Setting Pannel
   if ($setting.length > 0) {
